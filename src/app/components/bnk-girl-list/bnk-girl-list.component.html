@@ -1,6 +1,5 @@
-<p>
-  bnk-girl-list works!
-</p>
-<div *ngFor="let member of members">
-  <app-bnk-girl [member]="member"></app-bnk-girl>
+<div class="row card-deck">
+  <div class="col-sm-4 mb3" *ngFor="let member of members">
+    <app-bnk-girl [member]="member"></app-bnk-girl>
+  </div>
 </div>
