@@ -19,4 +19,8 @@ export class BnkService {
   instagram(id: string): Observable<Feed>{
       return this.http.get<Feed>(`${environment.instagram_api_url}${id}`);
   }
+
+  profile(id: string): Observable<Member>{
+      return this.http.get<Member>(`${environment.api_url}/bnk/members/${id}`);
+  }
 }

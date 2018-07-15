@@ -1,0 +1,28 @@
+<div class="container" *ngIf="member">
+  <div class="card">
+    <div class="card-body">
+      <form class="form" [formGroup]="memberForm">
+        <button class="btn btn-primary" [routerLink]="['/admin']">Back</button>
+         <div class="card-img-float">
+           <br>
+          <img [src]="member.imgUrl" class="card-img-top">
+        </div>
+        <br>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label>Instagram</label>
+          <input type="text" class="form-control" formControlName="instagramId">
+        </div>
+        <div class="form-group">
+          <label>Image</label>
+          <input type="text" class="form-control" formControlName="imgUrl">
+        </div>
+        <button class="btn btn-primary" (click)="login()">Edit</button>
+        <button class="btn btn-primary ml-1" (click)="reset()">Reset</button>
+      </form>
+    </div>
+  </div>
+</div>

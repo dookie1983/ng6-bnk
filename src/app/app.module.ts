@@ -11,12 +11,17 @@ import { RouterModule, Route } from '@angular/router';
 import { InstagramComponent } from './components/instagram/instagram.component';
 import { InstagramListComponent } from './components/instagram-list/instagram-list.component';
 import { BnkSuffixPipe } from './pipes/bnk-suffix.pipe';
-import { LoginComponent } from './components/login/login.component'
+import { LoginComponent } from './components/login/login.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { AdminListComponent } from './components/admin-list/admin-list.component';
+import { AdminEditComponent } from './components/admin-edit/admin-edit.component'
 
 const routes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'admin/edit/:memberId', component:AdminEditComponent },
   { path: 'instargram/:instagramId', component: InstagramListComponent }
 ]
 
@@ -29,7 +34,10 @@ const routes: Route[] = [
     InstagramComponent,
     InstagramListComponent,
     BnkSuffixPipe,
-    LoginComponent
+    LoginComponent,
+    AdminComponent,
+    AdminListComponent,
+    AdminEditComponent
   ],
   imports: [
     BrowserModule,
